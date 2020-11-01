@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lapintaika</title>
+    <link rel="stylesheet" type="text/css" href="ruotu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+        </style>
+</head>
+<body>
+        <header>
+            <h1>Ravintola Lapintaika</h1>
+        </header>
+        <nav>
+                <ul class="navbar">
+                        <li ><a class="navbutton" href="lapintaika.html">Etusivu</a></li>
+                        <li ><a class="navbutton" href="lapintaikalomake.html">Yhteydenotto</a></li>
+                    </ul>
+        </nav>
+        <article>
+            <h1>Lomake</h1>
+            <form action="somePHPpage.php" method="post">
+                Nimesi: <input type="text" name="firstname" maxlength=300><br>
+                Ikä: <input type="number" name="age"><br>
+                <textarea name="message" rows="5" cols="30">
+Kirjoita palautteesi tähän...</textarea><br>
+                <input type="submit" value="Lähetä">
+            </form>
+        </article>
+        <aside>
+            <img class="ruoka" src="./kuvat/logolapintaika.png" alt="kuva logosta">
+        </aside>
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6080.947865134572!2d24.14430284763709!3d67.60255666437047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45d38d4500000001%3A0x984f20c5f7fffd41!2sKauneushoitola%20Lapin%20Taika!5e0!3m2!1sfi!2sfi!4v1569249435495!5m2!1sfi!2sfi" width="350" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div id="yht">
+            <h1>Yhteystiedot ja aukioloajat:</h1>
+            <p>
+                Ravintola Lapintaika, Ravintolakatu 2, 98765 LAPINMAA
+                Puh. (012) 345 6789 Sähköposti: varaukset@jokuposti.net
+                <br>
+               <strong> Aukioloajat: </strong> ma - pe, 10:30 - 15:00
+                 </p></div>
+            
+        </section>
+        <footer>
+            <p> © 2019 Opiskelijatyö</p>
+        </footer>
+
+
+</body>

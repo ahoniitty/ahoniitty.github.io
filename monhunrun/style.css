@@ -1,0 +1,145 @@
+html, body{
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .grass, .sky, .road{
+    position: relative;
+  }
+  
+  .sky{
+    height: 40%;
+    background: rgb(183, 210, 221);
+  }
+  
+  .grass{
+    height: 30%;
+    background: rgb(21, 77, 45);
+  }
+  
+  .road{
+    height: 30%;
+    background: dimgrey;
+    width: 100%;
+  }
+  
+  .lines{
+    box-sizing: border-box;
+    border: dimgrey;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+  }
+  
+  /*// ELEMENTS TO ANIMATE //*/
+  
+  .rider {
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    width: 100px;
+    /* animation-name: drive;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0,1,1,.02); */
+    /* http://cubic-bezier.com/#.17,.67,.83,.67 */
+    animation: drive 6s both infinite linear,
+              jump 0.3s 1.2s ease; 
+  }
+  
+  .lorry {
+    position: absolute;
+    width: 500px;
+    top: -600px;
+    left: 0;
+    animation-name: drive;
+    animation-duration: 6s;
+    animation-delay: 1s; 
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  
+  .cloud {
+    position: absolute;
+  }
+  
+  .cloud:nth-child(1){
+    width: 200px;
+    top: 120px;
+    opacity: 0.5;
+    left: 0;
+    animation: wind 100s linear infinite;
+  }
+  
+  .cloud:nth-child(2){
+    width: 300px;
+    top: 0;
+    left: 0;
+    animation: wind 50s linear infinite;
+  }
+  
+  .trash {
+    width: 100px;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    cursor: pointer;
+    transition: transform 1s 1s ease-in; 
+  }
+  
+  .trash:hover{
+    transform: rotate(-360deg);
+  }
+  
+  .tree {
+    width: 350px;
+    position: absolute;
+    left: 400px;
+    top: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+  
+  .tree:hover { 
+    transform: scale(1.1); 
+    left: 390px;
+    top: 5px;
+  }
+  
+  /*// KEYFRAMES //*/
+  
+  @keyframes drive {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(1200px);
+    }
+  }
+  
+  @keyframes wind {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(1200px);
+    }
+  }
+  
+  @keyframes jump {
+    0% {
+      top: -100px;
+    }
+    50% {
+      top: -200px;
+      }
+    100% {
+      top: -100px;
+    }
+  }
+  

@@ -1,0 +1,135 @@
+header { grid-area: header; }
+nav { grid-area: menu; }
+aside { grid-area: aside; }
+article { grid-area: main; }
+section { grid-area: section; }
+footer { grid-area: footer; }
+
+body {
+    background-image: url("./kuvat/lapintaika.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas: 
+      "header header header header header"
+      "menu menu menu menu menu"
+      "main main main main main "
+      "aside aside section section section  "
+      "footer footer footer footer footer";
+      font-family: 'Varela Round', sans-serif;
+
+}
+.ruoka {
+  max-width: 10em;
+}
+.navbar {
+  list-style-type: none;
+}
+.navbutton {
+  padding: 10px;
+  border-width: 1px;
+  text-decoration: none;
+  text-align: center;
+}
+article {
+  background-color: rgba(247, 247, 247, 0.747);
+  text-align: center;
+}
+section {
+  background-color: rgba(247, 247, 247, 0.747);
+  margin-top: 2px;
+  display: flex;
+}
+iframe { 
+  margin-top:2px;
+  margin-left:0px;
+
+}
+#yht {
+  margin-top:2px;  
+  margin-left:10px;
+}
+aside { 
+  background-color: rgba(247, 247, 247, 0.747);
+  margin-top: 2px;
+  margin-right: 1px;
+}
+
+@media screen and (max-width: 960px){
+body {
+  background-image: url("./kuvat/lapintaika.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-areas: 
+    "header header header header header"
+    "menu menu menu menu menu"
+    "main main main main main "
+    " aside aside section section section  "
+    "footer footer footer footer footer";
+    font-family: 'Varela Round', sans-serif;
+
+}
+.ruoka {
+  max-width: 10em;
+}
+aside { 
+  background-color: rgba(247, 247, 247, 0.747);
+  margin-top: 2px;
+  margin-right: 1px;
+}
+section {
+  background-color: rgba(247, 247, 247, 0.747);
+  margin-top: 2px;
+  display: flex;
+}
+.navbar {
+list-style-type: none;
+}
+.navbutton {
+padding: 10px;
+border-width: 1px;
+text-decoration: none;
+text-align: center;
+}
+section {
+  background-color: rgba(247, 247, 247, 0.747);
+  margin-top: 2px;
+  display: flex;
+}
+iframe { 
+  margin-top:2px;
+  margin-left:0px;
+
+}
+#yht {
+  margin-top:2px;  
+  margin-left:10px;
+}
+
+}
+@media screen and (max-width: 480px){
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: #3196F3;
+    padding: 3px;
+    font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+
+  }
+  section {
+    flex-wrap: wrap;
+  }
+}
+/**    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: auto;**/
